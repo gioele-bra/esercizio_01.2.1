@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api', (req, res) => {
-  var jsonData = {"messaggio": ["Important 1 ","Thing 2",]};
+  var jsonData = {"results": ["Important 1 ","Thing 2",]};
   res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(jsonData));
 });
