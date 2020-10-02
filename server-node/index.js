@@ -6,8 +6,16 @@ const cors = require('cors');
 app.use(new cors());
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/', function (req, res) {
-   res.send('Hello World!');
+app.get('/',function(req,res){
+ res.sendFile(path.join(__dirname, 'index.html')); //__dirname : Ritorna la cartella del progetto
+});
+
+app.get('/about',function(req,res){
+ res.sendFile(path.join(__dirname,'about.html')); //__dirname : Ritorna la cartella del progetto
+});
+
+app.get('/sitemap',function(req,res){
+ res.sendFile(path.join(__dirname,'sitemap.html')); //__dirname : Ritorna la cartella del progetto
 });
 
 app.get('/api', (req, res) => {
